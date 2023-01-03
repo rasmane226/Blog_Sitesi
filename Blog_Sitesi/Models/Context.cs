@@ -11,8 +11,10 @@ namespace Blog_Sitesi.Models.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=ALPEREN\SQLEXPRESS;database=Blog_Sitesi;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=alperen\\sqlexpress;database=Blog_Sitesi;integrated security=true;");
         }
         public DbSet<Communication> Communications { get; set; }
+        public DbSet<Login> logins { get; set; }
+        public DbSet<Kayit> kayits { get; set; }
     }
 }
